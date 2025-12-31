@@ -1,0 +1,175 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 480px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.calculator label {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.calculator input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.calculator input[type="range"] {
+  width: 100%;
+  margin-top: 6px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #1e40af;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.results {
+  margin-top: 25px;
+  background: #eef2ff;
+  padding: 18px;
+  border-radius: 8px;
+}
+
+.results h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #dbeafe;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-item strong {
+  color: #1e40af;
+}
+
+/* Animación */
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   AdSense styles
+   ========================= */
+
+.ad-container {
+  margin: 25px 0;
+  padding: 10px;
+  text-align: center;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.ad-container ins {
+  display: block;
+  margin: auto;
+}
+
+/* =========================
+   SEO Content
+   ========================= */
+
+.seo-content {
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.seo-content h2 {
+  margin-top: 25px;
+  color: #1e40af;
+  font-size: 18px;
+}
+
+.seo-content h3 {
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.seo-content ul {
+  padding-left: 20px;
+}
+
+.seo-content li {
+  margin-bottom: 8px;
+}
+
+/* =========================
+   Amortization Chart
+   ========================= */
+
+.chart-container {
+  margin-top: 30px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.chart-container h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #1e40af;
+}

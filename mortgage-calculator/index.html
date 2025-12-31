@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mortgage Calculator | Monthly Payment & Interest</title>
+  <meta name="description" content="Free mortgage calculator to estimate monthly payments, total interest and loan cost. Simple, fast and accurate.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="canonical" href="https://tusitio.github.io/mortgage-calculator/">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- 🔹 Google AdSense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+    crossorigin="anonymous">
+  </script>
+</head>
+<body>
+
+<main class="container">
+
+  <h1>Mortgage Calculator</h1>
+  <p class="subtitle">Estimate your monthly mortgage payment easily.</p>
+
+  <!-- 🔹 AD SLOT: TOP -->
+  <div class="ad-container">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+      data-ad-slot="1234567890"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <div class="calculator">
+
+    <label>
+      Home Price ($)
+      <input type="number" id="homePrice" placeholder="300000">
+      <input type="range" id="homePriceRange">
+    </label>
+
+    <label>
+      Down Payment ($)
+      <input type="number" id="downPayment" placeholder="60000">
+      <input type="range" id="downPaymentRange">
+    </label>
+
+    <label>
+      Loan Term (years)
+      <input type="number" id="loanTerm" placeholder="30">
+      <input type="range" id="loanTermRange">
+    </label>
+
+    <label>
+      Interest Rate (%)
+      <input type="number" step="0.01" id="interestRate" placeholder="6.5">
+      <input type="range" id="interestRateRange" step="0.01">
+    </label>
+
+    <button id="calculateBtn" onclick="calculateMortgage()">Calculate</button>
+  </div>
+
+  <!-- 🔹 Results -->
+  <div class="results fade-in" id="results" style="display:none;">
+    <h2>Your Results</h2>
+
+    <div class="result-item">
+      <span>Monthly Payment</span>
+      <strong id="monthlyPayment">$0</strong>
+    </div>
+
+    <div class="result-item">
+      <span>Total Payment</span>
+      <strong id="totalPayment">$0</strong>
+    </div>
+
+    <div class="result-item">
+      <span>Total Interest</span>
+      <strong id="totalInterest">$0</strong>
+    </div>
+  </div>
+
+  <!-- 🔹 Amortization Chart -->
+  <div class="chart-container" id="chartContainer" style="display:none;">
+    <h2>Loan Amortization Over Time</h2>
+    <canvas id="amortizationChart"></canvas>
+  </div>
+
+  <!-- 🔹 SEO CONTENT -->
+  <section class="seo-content">
+
+    <h2>What Is a Mortgage Calculator?</h2>
+    <p>
+      A mortgage calculator is a free financial tool that helps you estimate how much you will pay each month when buying a home with a mortgage loan.
+      By entering basic information such as the home price, down payment, interest rate, and loan term, you can quickly understand the total cost of your mortgage.
+    </p>
+    <p>
+      Mortgage calculators are useful for people at any stage of the home-buying process.
+      Whether you are just exploring options or comparing lenders, this tool simplifies complex calculations.
+    </p>
+
+    <h2>How Monthly Mortgage Payments Are Calculated</h2>
+    <p>
+      Monthly mortgage payments are calculated using a standard amortization formula.
+      Each payment includes both principal (the loan amount) and interest (the cost of borrowing).
+      Early payments include more interest, while later payments focus more on reducing the loan balance.
+    </p>
+
+    <h2>Tips to Reduce Your Mortgage Payment</h2>
+    <ul>
+      <li>Make a larger down payment.</li>
+      <li>Choose a shorter loan term.</li>
+      <li>Compare interest rates from multiple lenders.</li>
+      <li>Improve your credit score before applying.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>Does this calculator include taxes and insurance?</h3>
+    <p>
+      No. This calculator estimates principal and interest only.
+      Property taxes, insurance, and other fees may increase your monthly payment.
+    </p>
+
+    <h3>Is this calculator accurate?</h3>
+    <p>
+      Yes. The calculator uses standard mortgage formulas.
+      However, actual loan terms may vary depending on lender policies and additional costs.
+    </p>
+
+    <h3>Can I use this calculator in any country?</h3>
+    <p>
+      Yes. The calculation method works worldwide.
+      You can interpret the results using your local currency.
+    </p>
+
+  </section>
+
+  <!-- 🔹 AD SLOT: BOTTOM -->
+  <div class="ad-container">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+      data-ad-slot="9876543210"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+<footer style="text-align:center; margin-top:40px; font-size:13px;">
+  <a href="privacy-policy.html">Privacy Policy</a>
+</footer>
+
+</main>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Main JS -->
+<script src="js/mortgage.js"></script>
+</body>
+</html>
