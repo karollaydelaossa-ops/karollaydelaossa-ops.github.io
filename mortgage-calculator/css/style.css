@@ -218,3 +218,92 @@ button:active {
 .cookie-banner button:hover {
   background: #1e40af;
 }
+
+/* =========================
+   Global Header (Calculator)
+   ========================= */
+
+.site-header {
+  background: linear-gradient(90deg, #2563eb, #16a34a);
+  color: #ffffff;
+  padding: 16px 24px;
+}
+
+.site-header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-logo-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #2563eb;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.site-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  margin-left: 16px;
+  opacity: 0.9;
+}
+
+.site-nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* =========================
+   Global Footer (Calculator)
+   ========================= */
+
+.site-footer {
+  margin-top: 50px;
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 30px 20px;
+  font-size: 13px;
+}
+
+.site-footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.site-footer a {
+  color: #93c5fd;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer .brand {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #ffffff;
+}

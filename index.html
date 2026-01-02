@@ -6,33 +6,57 @@
   <meta name="description" content="Free financial calculators including mortgage, loan and savings calculators.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="css/main.css">
+
   <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WHFBC1D3J2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-WHFBC1D3J2', {
-    anonymize_ip: true
-  });
-</script>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHFBC1D3J2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WHFBC1D3J2', { anonymize_ip: true });
+  </script>
 </head>
-<body style="font-family: Arial; text-align:center; padding:40px;">
 
-  <h1>Clear Finance Calculators</h1>
-  <p>Free, simple and accurate financial calculators.</p>
+<body>
 
-  <p>
-    👉 <a href="mortgage-calculator/">Mortgage Calculator</a>
-  </p>
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">CF</div>
+    <div class="site-title">Clear Finance Calculators</div>
+  </div>
+</header>
 
-  <footer style="text-align:center; margin-top:40px; font-size:13px;">
-  <a href="privacy-policy.html">Privacy Policy</a> |
-  <a href="terms-and-conditions.html">Terms & Conditions</a>
+<!-- MAIN -->
+<main class="main-content">
+  <h1>Free Financial Calculators</h1>
+  <p>Simple, accurate tools to help you make better financial decisions.</p>
+
+  <div class="tools">
+    <a href="mortgage-calculator/" class="tool-card">
+      <h2>Mortgage Calculator</h2>
+      <p>Estimate monthly payments, total interest and loan cost.</p>
+      <span>Open calculator →</span>
+    </a>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <a href="privacy-policy.html">Privacy Policy</a> |
+      <a href="terms-and-conditions.html">Terms & Conditions</a>
+    </div>
+    <div>
+      © 2025 Clear Finance. All rights reserved.
+    </div>
+  </div>
 </footer>
 
+<!-- COOKIE BANNER -->
 <div id="cookie-banner" class="cookie-banner">
   <p>
     This site uses cookies for analytics and ads.
