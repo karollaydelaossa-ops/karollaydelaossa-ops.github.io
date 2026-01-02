@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     banner.style.display = "flex";
   }
 
-  acceptBtn.addEventListener("click", () => {
+  acceptBtn.addEventListener("click", function () {
     localStorage.setItem("cookiesAccepted", "true");
     banner.style.display = "none";
   });
