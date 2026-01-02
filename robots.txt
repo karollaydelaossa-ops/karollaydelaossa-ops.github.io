@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://karollaydelaossa-ops.github.io/Clear-Finance-Calculator-Site/sitemap.xml
