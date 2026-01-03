@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loan Calculator | Monthly Payment & Interest</title>
+  <meta name="description" content="Free loan calculator to estimate monthly payments, total interest and loan cost. Simple and accurate.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="canonical" href="https://karollaydelaossa-ops.github.io/Clear-Finance-Calculator-Site/loan-calculator/">
+  <link rel="stylesheet" href="../css/main.css">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WHFBC1D3J2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WHFBC1D3J2', {
+    anonymize_ip: true
+  });
+</script>
+
+  <!-- 🔹 Google AdSense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+    crossorigin="anonymous">
+  </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Loan Calculator",
+  "operatingSystem": "Web",
+  "applicationCategory": "FinanceApplication",
+  "url": "https://karollaydelaossa-ops.github.io/Clear-Finance-Calculator-Site/loan-calculator/",
+  "description": "Free loan calculator to estimate monthly payments, total interest, and loan cost.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Clear Finance",
+    "url": "https://karollaydelaossa-ops.github.io/Clear-Finance-Calculator-Site/"
+  }
+}
+</script>
+
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">CF</div>
+    <div class="site-title">Clear Finance Calculators</div>
+
+    <nav class="site-nav">
+      <a href="../">Home</a>
+      <a href="../mortgage-calculator/">Mortgage Calculator</a>
+      <a href="../about.html">About</a>
+      <a href="../privacy-policy.html">Privacy</a>
+      <a href="../terms-and-conditions.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page-container">
+  <div class="container">
+
+
+  <h1>Loan Calculator</h1>
+  <h2 class="subtitle">
+  Free Loan Calculator – Estimate Monthly Payments & Interest
+</h2>
+
+  <!-- 🔹 AD SLOT: TOP -->
+  <div class="ad-container">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+      data-ad-slot="1234567890"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+<div class="calculator">
+
+  <label>
+    Loan Amount ($)
+    <input type="number" id="loanAmount" placeholder="10000">
+    <input type="range" id="loanAmountRange">
+  </label>
+
+  <label>
+    Interest Rate (%)
+    <input type="number" step="0.01" id="interestRate" placeholder="6.5">
+    <input type="range" id="interestRateRange" step="0.01">
+  </label>
+
+  <label>
+    Loan Term (years)
+    <input type="number" id="loanTerm" placeholder="5">
+    <input type="range" id="loanTermRange">
+  </label>
+
+  <button onclick="calculateLoan()">
+    Calculate Loan Payment
+  </button>
+
+</div>
+
+  <!-- 🔹 Results -->
+  <div class="results fade-in" id="results" style="display:none;">
+    <h2>Your Results</h2>
+
+    <div class="result-item">
+      <span>Monthly Payment</span>
+      <strong id="monthlyPayment">$0</strong>
+    </div>
+
+    <div class="result-item">
+      <span>Total Payment</span>
+      <strong id="totalPayment">$0</strong>
+    </div>
+
+    <div class="result-item">
+      <span>Total Interest</span>
+      <strong id="totalInterest">$0</strong>
+    </div>
+  </div>
+
+  <!-- 🔹 Amortization Chart -->
+  <div class="chart-container" id="chartContainer" style="display:none;">
+    <h2>Loan Amortization Over Time</h2>
+    <canvas id="amortizationChart"></canvas>
+  </div>
+
+<!-- 🔹 AD SLOT: AFTER RESULTS -->
+<div class="ad-container">
+  <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+    data-ad-slot="1122334455"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+  <!-- 🔹 SEO CONTENT -->
+  <section class="seo-content">
+  <h2>What Is a Loan Calculator?</h2>
+  <p>
+    A loan calculator helps you estimate your monthly loan payments based on the loan amount,
+    interest rate, and loan term. It is useful for personal loans, auto loans, and other installment loans.
+  </p>
+
+  <h2>How Loan Payments Are Calculated</h2>
+  <p>
+    Loan payments are calculated using a standard amortization formula.
+    Each payment includes interest and principal, allowing you to understand the true cost of borrowing.
+  </p>
+
+  <h2>Why Use a Loan Calculator?</h2>
+  <ul>
+    <li>Plan your monthly budget</li>
+    <li>Compare loan offers</li>
+    <li>Understand interest costs</li>
+  </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>Does this calculator include taxes and insurance?</h3>
+    <p>
+      No. This calculator estimates principal and interest only.
+      Property taxes, insurance, and other fees may increase your monthly payment.
+    </p>
+
+    <h3>Is this calculator accurate?</h3>
+    <p>
+      Yes. The calculator uses standard loan formulas.
+      However, actual loan terms may vary depending on lender policies and additional costs.
+    </p>
+
+    <h3>Can I use this calculator in any country?</h3>
+    <p>
+      Yes. The calculation method works worldwide.
+      You can interpret the results using your local currency.
+    </p>
+
+<p>
+  Explore more tools on our 
+  <a href="../">financial calculators homepage</a>.
+</p>
+
+  </section>
+
+  <!-- 🔹 AD SLOT: BOTTOM -->
+  <div class="ad-container">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+      data-ad-slot="9876543210"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <p class="financial-disclaimer">
+  <strong>Disclaimer:</strong> This calculator provides estimates only and does not constitute financial, legal, or professional advice. Results may vary based on individual circumstances. Please consult a qualified professional before making financial decisions.
+</p>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+    <a href="../privacy-policy.html">Privacy Policy</a>
+    |
+    <a href="../terms-and-conditions.html">Terms & Conditions</a>
+    |
+    <a href="../about.html">About</a>
+</div>
+    <div>
+      © 2025 Clear Finance. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+</div>
+</main>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Main JS -->
+<script src="loan.js"></script>
+
+<div id="cookie-banner" class="cookie-banner">
+  <p>
+    This site uses cookies for analytics and ads.
+    <a href="../privacy-policy.html">Learn more</a>
+  </p>
+  <button id="accept-cookies">Accept</button>
+</div>
+
+<script src="js/cookies.js"></script>
+
+</body>
+</html>
