@@ -1,3 +1,16 @@
+/* =========================
+   CSS Variables (Calculator)
+   ========================= */
+
+:root {
+  --blue: #2563eb;
+  --blue-dark: #1e40af;
+  --green: #16a34a;
+  --green-dark: #15803d;
+  --white: #ffffff;
+  --text-dark: #1f2937;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: #f4f6f8;
