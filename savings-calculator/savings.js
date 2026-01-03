@@ -1,22 +1,28 @@
 let savingsChart = null;
 
 function calculateSavings() {
-  const initial = Number(document.getElementById("initialAmount").value);
-  const monthly = Number(document.getElementById("monthlyContribution").value);
-  const rate = Number(document.getElementById("interestRate").value) / 100 / 12;
+  const initial = Number(document.getElementById("initialAmount").value) || 0;
+  const monthly = Number(document.getElementById("monthlyContribution").value) || 0;
+  const annualRate = Number(document.getElementById("interestRate").value);
   const years = Number(document.getElementById("years").value);
 
-  if (!years) return;
+  if (!years || annualRate < 0) return;
 
+  const rate = annualRate / 100 / 12;
   const months = years * 12;
+
   let balance = initial;
   let balances = [];
   let totalContributions = initial;
 
   for (let i = 1; i <= months; i++) {
+    // 1️⃣ Apply interest to existing balance
+    balance += balance * rate;
+
+    // 2️⃣ Add monthly contribution at end of period
     balance += monthly;
     totalContributions += monthly;
-    balance += balance * rate;
+
     balances.push(balance);
   }
 
@@ -66,10 +72,25 @@ function renderSavingsChart(balances) {
     },
     options: {
       responsive: true,
+      plugins: {
+        legend: {
+          display: true,
+        },
+      },
       scales: {
+        x: {
+          title: {
+            display: true,
+            text: "Month",
+          },
+        },
         y: {
+          title: {
+            display: true,
+            text: "Balance",
+          },
           ticks: {
-            callback: value =>
+            callback: (value) =>
               "$" + value.toLocaleString("en-US"),
           },
         },
