@@ -333,3 +333,62 @@ body {
 .site-nav a.active {
   text-decoration: underline;
 }
+
+/* =========================
+   Calculator Layout (Global)
+   ========================= */
+
+.calculator-container {
+  max-width: 480px;
+  margin: 40px auto;
+  background: var(--white);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.calculator-container h1 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.calculator label {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.calculator input[type="number"],
+.calculator input[type="range"] {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.calculator input[type="number"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.calculator button {
+  width: 100%;
+  padding: 12px;
+  background: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.calculator button:hover {
+  background: var(--blue-dark);
+}
