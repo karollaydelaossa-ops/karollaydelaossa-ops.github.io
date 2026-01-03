@@ -448,3 +448,32 @@ body {
   background: #f9fafb;
   border-radius: 8px;
 }
+
+/* =========================
+   Calculator Page Layout
+   ========================= */
+
+.page-container {
+  max-width: 900px;
+  margin: 40px auto 60px auto;
+  padding: 0 20px;
+}
+
+/* Ajustes de títulos SOLO para calculadoras */
+.page-container h1 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.page-container .subtitle {
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-light);
+  margin-bottom: 25px;
+}
+
+/* Caja blanca (calculadora) */
+.page-container .container {
+  margin: 0 auto;
+}
