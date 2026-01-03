@@ -307,3 +307,29 @@ body {
   color: #065f46;
   margin-top: 15px;
 }
+
+/* =========================
+   Navigation
+   ========================= */
+
+.site-nav {
+  margin-top: 12px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.site-nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+.site-nav a.active {
+  text-decoration: underline;
+}
