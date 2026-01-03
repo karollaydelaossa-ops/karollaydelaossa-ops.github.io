@@ -540,3 +540,25 @@ body {
   border-radius: 6px;
   line-height: 1.5;
 }
+
+.ad-container {
+  margin: 30px 0;
+  padding: 12px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+  .ad-container {
+    margin: 22px 0;
+    padding: 8px;
+  }
+}
+
+.ad-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
