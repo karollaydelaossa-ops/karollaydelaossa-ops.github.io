@@ -392,3 +392,59 @@ body {
 .calculator button:hover {
   background: var(--blue-dark);
 }
+
+/* =========================
+   Calculator Results
+   ========================= */
+
+.results {
+  margin-top: 25px;
+  background: #eef2ff;
+  padding: 18px;
+  border-radius: 8px;
+}
+
+.results h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  color: var(--blue);
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #dbeafe;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-item strong {
+  color: var(--blue-dark);
+}
+
+/* =========================
+   Chart container
+   ========================= */
+
+.chart-container {
+  margin-top: 30px;
+  padding: 15px;
+  background: var(--white);
+  border-radius: 10px;
+}
+
+/* =========================
+   Ad container
+   ========================= */
+
+.ad-container {
+  margin: 25px 0;
+  padding: 10px;
+  text-align: center;
+  background: #f9fafb;
+  border-radius: 8px;
+}
