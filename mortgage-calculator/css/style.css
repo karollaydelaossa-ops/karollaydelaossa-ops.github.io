@@ -224,17 +224,17 @@ button:active {
    ========================= */
 
 .site-header {
-  background: linear-gradient(90deg, #2563eb, #16a34a);
-  color: #ffffff;
-  padding: 16px 24px;
+  background: linear-gradient(90deg, var(--blue), var(--green));
+  color: var(--white);
+  padding: 18px 30px;
 }
 
-.site-header-inner {
-  max-width: 900px;
-  margin: 0 auto;
+.header-inner {
+  max-width: 1000px;
+  margin: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 12px;
 }
 
 .logo {
