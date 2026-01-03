@@ -237,26 +237,20 @@ button:active {
   justify-content: space-between;
 }
 
-.site-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.site-logo-circle {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #ffffff;
-  color: #2563eb;
+.logo {
+  width: 38px;
+  height: 38px;
+  background: var(--white);
+  color: var(--blue);
   font-weight: bold;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .site-title {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 
