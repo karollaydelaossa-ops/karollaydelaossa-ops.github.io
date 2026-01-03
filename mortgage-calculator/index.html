@@ -67,7 +67,9 @@
 <main class="container">
 
   <h1>Mortgage Calculator</h1>
-  <p class="subtitle">Estimate your monthly mortgage payment easily.</p>
+  <h2 class="subtitle">
+  Free Mortgage Calculator – Estimate Monthly Payments & Interest
+</h2>
 
   <!-- 🔹 AD SLOT: TOP -->
   <div class="ad-container">
@@ -86,29 +88,31 @@
 
     <label>
       Home Price ($)
-      <input type="number" id="homePrice" placeholder="300000">
+      <input type="number" id="homePrice" aria-label="Home price" placeholder="300000">
       <input type="range" id="homePriceRange">
     </label>
 
     <label>
       Down Payment ($)
-      <input type="number" id="downPayment" placeholder="60000">
+      <input type="number" id="downPayment" aria-label="Down payment" placeholder="60000">
       <input type="range" id="downPaymentRange">
     </label>
 
     <label>
       Loan Term (years)
-      <input type="number" id="loanTerm" placeholder="30">
+      <input type="number" id="loanTerm" aria-label="Loan term" placeholder="30">
       <input type="range" id="loanTermRange">
     </label>
 
     <label>
       Interest Rate (%)
-      <input type="number" step="0.01" id="interestRate" placeholder="6.5">
+      <input type="number" step="0.01" id="interestRate" aria-label="Interest rate" placeholder="6.5">
       <input type="range" id="interestRateRange" step="0.01">
     </label>
 
-    <button id="calculateBtn" onclick="calculateMortgage()">Calculate</button>
+    <button id="calculateBtn" onclick="calculateMortgage()">
+  Calculate Mortgage Payment
+</button>
   </div>
 
   <!-- 🔹 Results -->
@@ -184,6 +188,11 @@
       Yes. The calculation method works worldwide.
       You can interpret the results using your local currency.
     </p>
+
+<p>
+  Explore more tools on our 
+  <a href="../">financial calculators homepage</a>.
+</p>
 
   </section>
 
