@@ -562,3 +562,7 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.calculator-container .ad-container {
+  max-width: 100%;
+}
