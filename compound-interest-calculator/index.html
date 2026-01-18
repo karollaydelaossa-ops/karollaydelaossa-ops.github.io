@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Compound Interest Calculator | Initial Investment & Accumuleted Return</title>
+  <meta name="description" content="Free compound interest calculator to estimate how your investments grow over time
+when interest is earned on both your initial investment and your accumulated returns. Simple, fast and accurate.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="canonical" href="https://karollaydelaossa-ops.github.io/compound-interest-calculator/">
+  <link rel="stylesheet" href="../css/main.css">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WHFBC1D3J2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WHFBC1D3J2', {
+    anonymize_ip: true
+  });
+</script>
+
+  <!-- 🔹 Google AdSense -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9870585852151650"
+    crossorigin="anonymous">
+  </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Mortgage Calculator",
+  "operatingSystem": "Web",
+  "applicationCategory": "FinanceApplication",
+  "url": "https://karollaydelaossa-ops.github.io/compound-interest-calculator/",
+  "description": "Free mortgage calculator to estimate monthly payments, total interest, and loan cost.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Clear Finance",
+    "url": "https://karollaydelaossa-ops.github.io/"
+  }
+}
+</script>
+
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">CF</div>
+    <div class="site-title">Clear Finance Calculators</div>
+  </div>
+
+  <nav class="site-nav">
+    <a href="../">Home</a>
+    <a href="../savings-calculator/">Savings</a>
+    <a href="../loan-calculator/">Loan</a>
+    <a href="../about.html">About</a>
+  </nav>
+</header>
+
+<main class="calculator-container">
+
+
+  <h1>Compound Interest Calculator</h1>
+  <h2 class="subtitle">
+  Free Compound Interest Calculator – Estimate how much your Investment Grow over time
+</h2>
+
+  <!-- 🔹 AD SLOT: TOP -->
+  <div class="ad-container">
+  <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-XXXXXXXX"
+    data-ad-slot="TOP_SLOT"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+    <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+  <div class="calculator">
+
+    <label>
+  Initial Investment ($)
+  <input type="number" id="initialAmount" placeholder="10000">
+</label>
+
+<label>
+  Monthly Contribution ($)
+  <input type="number" id="monthlyContribution" placeholder="500">
+</label>
+
+<label>
+  Annual Interest Rate (%)
+  <input type="number" step="0.01" id="interestRate" placeholder="7">
+</label>
+
+<label>
+  Investment Period (years)
+  <input type="number" id="years" placeholder="20">
+</label>
+
+<button onclick="calculateCompoundInterest()">
+  Calculate Growth
+</button>
+  </div>
+
+  <!-- 🔹 Results -->
+  <div class="results fade-in" id="results" style="display:none;">
+  <h2>Your Results</h2>
+
+  <div class="result-item">
+    <span>Final Balance</span>
+    <strong id="finalBalance">$0</strong>
+  </div>
+
+  <div class="result-item">
+    <span>Total Contributions</span>
+    <strong id="totalContributions">$0</strong>
+  </div>
+
+  <div class="result-item">
+    <span>Total Interest Earned</span>
+    <strong id="totalInterest">$0</strong>
+  </div>
+</div>
+
+  <!-- 🔹 Amortization Chart -->
+  <div class="chart-container" id="chartContainer" style="display:none;">
+  <h2>Investment Growth Over Time</h2>
+  <canvas id="compoundChart"></canvas>
+</div>
+
+<p class="calculation-note">
+  <strong>Note:</strong> This compound interest calculator assumes a fixed annual
+  interest rate compounded monthly. Monthly contributions are added at the beginning
+  of each month before interest is applied. Total contributions include your initial investment and all monthly deposits.
+  Interest earned is calculated as the difference between final balance and total contributions. Results are estimates for educational
+  purposes only and do not constitute financial or investment advice.
+</p>
+
+
+<!-- 🔹 AD SLOT: AFTER RESULTS -->
+<div class="ad-container">
+  <ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-XXXXXXXX"
+    data-ad-slot="RESULTS_SLOT"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+    <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+
+  <!-- 🔹 SEO CONTENT -->
+  <section class="seo-content">
+
+<h2>What Is a Compound Interest Calculator?</h2>
+<p>
+A compound interest calculator helps you estimate how your investments grow over time
+when interest is earned on both your initial investment and your accumulated returns.
+This calculator also includes regular monthly contributions, making it ideal for long-term
+financial planning.
+</p>
+<p>
+This calculator estimates investment growth using monthly compounding. The annual
+interest rate you enter is divided into monthly periods, and interest is applied
+12 times per year. Monthly contributions are added consistently and begin earning
+interest immediately.
+</p>
+
+<h2>How Compound Interest With Monthly Contributions Works</h2>
+<p>
+Compound interest means that you earn interest not only on your original investment
+but also on previously earned interest. When you add monthly contributions, each deposit
+also begins earning interest, accelerating growth over time.
+</p>
+
+<h2>Monthly vs Annual Compound Growth</h2>
+<p>
+Although interest rates are usually quoted annually, investment growth typically
+occurs on a monthly basis. Monthly compounding results in higher total returns over
+time compared to annual compounding because interest is calculated more frequently.
+</p>
+
+<p>
+This calculator uses monthly compounding to provide a more realistic projection
+for long-term savings and investment plans.
+</p>
+
+
+<h2>The Formula Used in This Calculator</h2>
+<p>
+    This compound interest calculator combines <strong>two standard financial formulas</strong>
+    to provide an accurate projection of long-term investment growth.
+  </p>
+
+  <h3>1. Growth of the Initial Investment</h3>
+
+  <p>
+    The initial investment grows over time using the compound interest formula:
+  </p>
+
+  <p class="formula">
+    <strong>FV = P × (1 + r)<sup>n</sup></strong>
+  </p>
+
+  <p><strong>Where:</strong></p>
+  <ul>
+    <li><strong>FV</strong> = Future value of the initial investment</li>
+    <li><strong>P</strong> = Initial investment amount</li>
+    <li><strong>r</strong> = Interest rate per compounding period</li>
+    <li><strong>n</strong> = Total number of compounding periods</li>
+  </ul>
+
+  <p>
+    This formula shows how your initial investment grows as interest is applied
+    repeatedly over time.
+  </p>
+
+  <h3>2. Growth of Monthly Contributions</h3>
+
+  <p>
+    Regular monthly contributions are calculated using the future value of a series formula:
+  </p>
+
+  <p class="formula">
+    <strong>FV = PMT × ((1 + r)<sup>n</sup> − 1) / r</strong>
+  </p>
+
+  <p><strong>Where:</strong></p>
+  <ul>
+    <li><strong>FV</strong> = Future value of all contributions</li>
+    <li><strong>PMT</strong> = Monthly contribution amount</li>
+    <li><strong>r</strong> = Interest rate per compounding period</li>
+    <li><strong>n</strong> = Total number of contributions</li>
+  </ul>
+
+  <p>
+    This formula accounts for the fact that each contribution earns interest
+    for a different amount of time.
+  </p>
+
+  <h3>3. Final Balance Calculation</h3>
+
+  <p>
+    The calculator combines both results to produce the final balance:
+  </p>
+
+  <p class="formula">
+    <strong>Final Balance = Initial Investment Growth + Contribution Growth</strong>
+  </p>
+
+  <p>
+    This method provides a realistic projection of long-term investment growth
+    and closely reflects real-world investing behavior.
+  </p>
+
+  <h3>Important Notes</h3>
+
+  <ul>
+    <li>Total contributions include the initial investment and all monthly deposits.</li>
+    <li>Total interest earned is calculated as the final balance minus total contributions.</li>
+    <li>Early contributions grow longer than later ones, increasing overall returns.</li>
+  </ul>
+
+<p>
+This approach provides a realistic projection of long-term investment growth.
+</p>
+
+<h2>Assumptions Used in This Calculation</h2>
+<ul>
+  <li>The interest rate remains constant over the entire investment period</li>
+  <li>Contributions are made monthly and on time</li>
+  <li>No taxes, fees, or inflation are applied</li>
+  <li>Interest is compounded monthly</li>
+</ul>
+
+
+<h2>Who Should Use This Calculator?</h2>
+<ul>
+  <li>Investors planning for retirement</li>
+  <li>People saving for long-term goals</li>
+  <li>Anyone learning how compound interest works</li>
+</ul>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Is the interest rate annual or monthly?</h3>
+<p>
+The interest rate entered is annual. The calculator converts it to a monthly rate
+to apply compound growth accurately.
+</p>
+
+<h3>Are monthly contributions included in total contributions?</h3>
+<p>
+Yes. Total contributions include the initial investment plus all monthly deposits
+made over the investment period.
+</p>
+
+<h3>Does this calculator guarantee returns?</h3>
+<p>
+No. The results are estimates only and should not be considered guaranteed investment
+returns.
+</p>
+
+
+</section>
+
+
+  <!-- 🔹 AD SLOT: BOTTOM -->
+  <div class="ad-container">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+      data-ad-slot="9876543210"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <p class="financial-disclaimer">
+  <strong>Disclaimer:</strong> This calculator provides estimates only and does not constitute financial, legal, or professional advice. Results may vary based on individual circumstances. Please consult a qualified professional before making financial decisions.
+</p>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <a href="privacy-policy.html">Privacy Policy</a> |
+      <a href="terms-and-conditions.html">Terms & Conditions</a> |
+      <a href="about.html">About</a>
+    </div>
+    <div>
+      © 2025 Clear Finance. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Main JS -->
+<script src="compound.js"></script>
+
+<div id="cookie-banner" class="cookie-banner">
+  <p>
+    This site uses cookies for analytics and ads.
+    <a href="../privacy-policy.html">Learn more</a>
+  </p>
+  <button id="accept-cookies">Accept</button>
+</div>
+
+<script src="js/cookies.js"></script>
+
+</body>
+</html>

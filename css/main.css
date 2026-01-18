@@ -566,3 +566,12 @@ body {
 .calculator-container .ad-container {
   max-width: 100%;
 }
+
+.formula {
+  background: #f6f8fa;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-family: monospace;
+  text-align: center;
+  margin: 12px 0;
+}
